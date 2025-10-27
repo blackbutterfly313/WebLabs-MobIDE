@@ -14,3 +14,20 @@ gradle.projectsEvaluated {
         }
     }
 }
+
+// --- Universal guard for missing validateDockerApp-like tasks ---
+gradle.projectsEvaluated {
+    allprojects { proj ->
+        def dockerTasks = ["validateDockerApp", "validateDockerCompose", "validateDocker"]
+        dockerTasks.each { name ->
+            def validateTask = proj.tasks.findByName(name)
+            if (validateTask) {
+                proj.tasks.matching { it.name.startsWith("assemble") || it.name.startsWith("bundle") }.all { buildTask ->
+                    buildTask.dependsOn(validateTask)
+                }
+            } else {
+                println "[INFO] Skipping ${proj.name}:${name} (task not found)"
+            }
+        }
+    }
+}
