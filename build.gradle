@@ -9,7 +9,7 @@ gradle.projectsEvaluated {
         }
         ["validateDockerApp", "validateDockerCompose", "validateDocker"].each { name ->
             if (!proj.tasks.findByName(name)) {
-                println \"[INFO] Skipping ${proj.name}:${name} (task not found)\"
+                println "[INFO] Skipping ${proj.name}:${name} (task not found)"
             }
         }
     }

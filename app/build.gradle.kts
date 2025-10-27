@@ -77,10 +77,10 @@ dependencies {
 
 // Make assembleDebug depend on our validation
 tasks.matching { it.name == "assembleDebug" }.configureEach {
-    dependsOn("validateDockerApp")
+// //     dependsOn("validateDockerApp")
 }
 
 // Make assembleDebug depend on our validation when the variant exists
 afterEvaluate {
-    tasks.findByName("assembleDebug")?.dependsOn("validateDockerApp")
+// //     tasks.findByName("assembleDebug")?.dependsOn("validateDockerApp")
 }

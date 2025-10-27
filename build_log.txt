@@ -1,0 +1,87 @@
+Picked up _JAVA_OPTIONS: -Djava.io.tmpdir=/data/data/com.termux/files/usr/tmp
+Starting a Gradle Daemon (subsequent builds will be faster)
+Calculating task graph as no cached configuration is available for tasks: clean assembleDebug
+
+> Configure project :
+Build was configured to prefer settings repositories over project repositories but repository 'Google' was added by build file 'build.gradle.kts'
+Build was configured to prefer settings repositories over project repositories but repository 'MavenRepo' was added by build file 'build.gradle.kts'
+Build was configured to prefer settings repositories over project repositories but repository 'Gradle Central Plugin Repository' was added by build file 'build.gradle.kts'
+Build was configured to prefer settings repositories over project repositories but repository 'flatDir' was added by build file 'build.gradle.kts'
+Build was configured to prefer settings repositories over project repositories but repository 'Google' was added by build file 'build.gradle.kts'
+Build was configured to prefer settings repositories over project repositories but repository 'MavenRepo' was added by build file 'build.gradle.kts'
+Build was configured to prefer settings repositories over project repositories but repository 'Gradle Central Plugin Repository' was added by build file 'build.gradle.kts'
+Build was configured to prefer settings repositories over project repositories but repository 'flatDir' was added by build file 'build.gradle.kts'
+
+> Configure project :app
+WARNING: The option setting 'android.defaults.buildfeatures.buildconfig=true' is deprecated.
+The current default is 'false'.
+It will be removed in version 9.0 of the Android Gradle plugin.
+You can resolve this warning in Android Studio via `Refactor` > `Migrate BuildConfig to Gradle Build Files`
+WARNING: Using flatDir should be avoided because it doesn't support any meta-data formats.
+
+> Task :app:generateDebugResources UP-TO-DATE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:checkKotlinGradlePluginConfigurationErrors
+> Task :app:clean UP-TO-DATE
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:extractDeepLinksDebug
+> Task :app:generateDebugBuildConfig
+> Task :app:packageDebugResources
+> Task :app:javaPreCompileDebug
+> Task :app:mapDebugSourceSetPaths
+> Task :app:desugarDebugFileDependencies
+> Task :app:parseDebugLocalResources
+> Task :app:checkDebugAarMetadata
+> Task :app:writeDebugAppMetadata
+> Task :app:writeDebugSigningConfigVersions
+> Task :app:mergeDebugAssets
+> Task :app:mergeDebugJniLibFolders
+> Task :app:mergeDebugNativeLibs NO-SOURCE
+> Task :app:stripDebugDebugSymbols NO-SOURCE
+> Task :app:compressDebugAssets
+> Task :app:dataBindingMergeDependencyArtifactsDebug
+> Task :app:checkDebugDuplicateClasses
+> Task :app:processDebugMainManifest
+> Task :app:processDebugManifest
+> Task :app:validateSigningDebug
+> Task :app:processDebugManifestForPackage
+> Task :app:mergeDebugResources
+> Task :app:mergeExtDexDebug
+> Task :app:mergeLibDexDebug
+
+AAPT2 aapt2-8.2.0-10154469-linux Daemon #0: Unexpected error output: /data/data/com.termux/files/home/.gradle/caches/transforms-4/8747c08be5796cb2f7ec203a1039e628/transformed/aapt2-8.2.0-10154469-linux/aapt2[31]: syntax error: unexpected '('
+AAPT2 aapt2-8.2.0-10154469-linux Daemon #1: Unexpected error output: /data/data/com.termux/files/home/.gradle/caches/transforms-4/8747c08be5796cb2f7ec203a1039e628/transformed/aapt2-8.2.0-10154469-linux/aapt2[31]: syntax error: unexpected '('
+
+> Task :app:processDebugResources FAILED
+> Task :app:dataBindingGenBaseClassesDebug
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:processDebugResources'.
+> Could not resolve all files for configuration ':app:debugRuntimeClasspath'.
+   > Failed to transform appcompat-1.6.1.aar (androidx.appcompat:appcompat:1.6.1) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.dependency.bundling=external, org.gradle.libraryelements=aar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.termux/files/home/.gradle/caches/transforms-4/200a0f18534ae7b23f8cb669c09e8c56/transformed/appcompat-1.6.1.
+         > AAPT2 aapt2-8.2.0-10154469-linux Daemon #1: Daemon startup failed
+           This should not happen under normal circumstances, please file an issue if it does.
+   > Failed to transform core-1.12.0.aar (androidx.core:core:1.12.0) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.category=library, org.gradle.dependency.bundling=external, org.gradle.libraryelements=aar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.termux/files/home/.gradle/caches/transforms-4/41c76400c1f89a9c164013b50ad4abd4/transformed/core-1.12.0.
+         > AAPT2 aapt2-8.2.0-10154469-linux Daemon #0: Daemon startup failed
+           This should not happen under normal circumstances, please file an issue if it does.
+   > Failed to transform core-1.12.0.aar (androidx.core:core:1.12.0) to match attributes {artifactType=android-compiled-dependencies-resources, org.gradle.status=release}.
+      > Execution failed for AarResourcesCompilerTransform: /data/data/com.termux/files/home/.gradle/caches/transforms-4/41c76400c1f89a9c164013b50ad4abd4/transformed/core-1.12.0.
+         > AAPT2 aapt2-8.2.0-10154469-linux Daemon #0: Daemon startup failed
+           This should not happen under normal circumstances, please file an issue if it does.
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 5m 38s
+27 actionable tasks: 26 executed, 1 up-to-date
+Configuration cache entry stored.
