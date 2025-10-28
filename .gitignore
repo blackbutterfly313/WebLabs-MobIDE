@@ -1,68 +1,8 @@
-# Build artifacts
-build/
-dist/
-*.apk
-*.aar
-*.so
-*.o
-*.class
-
-# IDE and editor files
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-*.bak
-*.backup
-*.orig
-
-# Android Studio files
+.git/ 
 .gradle/
-local.properties
-.navigation/
-captures/
-output.json
-
-# AI Models (large files)
-ai/models/
-ai/downloads/
-*.bin
-*.safetensors
-*.gguf
-*.pt
-*.pth
-*.onnx
-
-# Dependencies
+app/build/
 node_modules/
-venv/
-__pycache__/
-*.pyc
-*.pyo
-
-# Temporary files
-tmp/
-temp/
-*.tmp
 *.log
-*.cache
-
-# Runtime logs and CI/CD artifacts
-_temp/
-runtime-logs/
-artifacts/
-reports/
-blocked.jsonl
-blocked.md
-
-# Archives and packages
-*.tar.gz
-*.zip
-*.vsix
-*.deb
-*.rpm
-
-# OS files
-.DS_Store
-Thumbs.db
+*.tmp
+build-artifacts/
+swapfile
